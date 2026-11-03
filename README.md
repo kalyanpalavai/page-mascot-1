@@ -105,14 +105,14 @@ Only the rendering changes, so the alignment holds.
 | `src/` | the `Mascot` component, published as `page-mascot` |
 | `skills/page-mascot/` | the agent skill: instructions, prompts, and the Python build scripts |
 | `characters/` | source sheets (PNG) for each character |
-| `public/mascots/` | the same sheets as WebP, served by the demo site |
-| `site/` | the demo page (Vite + Tailwind) |
+| `public/mascots/` | the WebP atlases the home page serves |
+| `site/` | the home page (Vite + Tailwind) |
 
 ## Development
 
 ```bash
 npm install
-npm run dev         # demo site
+npm run dev         # home page
 npm run typecheck
 npm run lint
 npm run build       # compile the package and sync the skill's copy of mascot.tsx

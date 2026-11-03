@@ -1,12 +1,10 @@
-import App from './app'
+import { Hero } from './hero'
 
-// The home page route shows the full demo under its own heading.
 function Home() {
   return (
-    <App
-      title="Hi, I’m kalyan 👋"
-      subtitle="Product Designer bridging user needs with modern design systems and AI-driven workflows. Focused on turning complex systems into clean, engaging user experiences."
-    />
+    <div className="mx-auto w-full max-w-[960px] px-6 pt-20 pb-28 sm:px-10 sm:pt-28">
+      <Hero />
+    </div>
   )
 }
 

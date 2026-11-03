@@ -9,7 +9,6 @@ lerna-debug.log*
 
 node_modules
 dist
-site-build
 site-build-home
 dist-ssr
 *.local

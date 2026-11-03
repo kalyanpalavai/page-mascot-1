@@ -36,13 +36,11 @@
     "sync:skill": "cp src/mascot.tsx skills/page-mascot/mascot.tsx",
     "check:skill": "diff -q src/mascot.tsx skills/page-mascot/mascot.tsx",
     "build": "tsc -p tsconfig.build.json && npm run sync:skill",
-    "build:site": "npm run check:skill && npm run typecheck && vite build",
+    "build:home": "npm run check:skill && npm run typecheck && vite build",
+    "deploy:home": "npm run build:home && npx wrangler pages deploy site-build-home --project-name kalyan-home",
     "typecheck": "tsc -p tsconfig.json",
     "lint": "oxlint",
     "preview": "vite preview",
-    "deploy": "npm run build:site && wrangler deploy",
-    "build:home": "vite build --config vite.home.config.ts",
-    "deploy:home": "npm run build:home && npx wrangler pages deploy site-build-home --project-name kalyan-home",
     "prepack": "npm run build"
   },
   "peerDependencies": {
