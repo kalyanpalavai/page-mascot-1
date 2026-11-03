@@ -26,7 +26,7 @@ HEAD_BAND = 0.55
 BODY_BAND = 0.40
 SHOULDER_BAND = 0.05   # fraction of the TILE, not of the character
 FACE_TOLERANCE = 34
-SCALE_CLAMP = 0.10
+SCALE_CLAMP = float(__import__('os').environ.get('SCALE_CLAMP', 0.10))  # how far a single frame may be rescaled to match the others; 0 keeps the drawn sizes
 MATCH_CLAMP = float(__import__('os').environ.get('MATCH_CLAMP', 0.20))  # how far the reactions sheet may be rescaled to match the directions sheet
 FIT_BAND = 0.86       # how far down the character the cross-sheet fit starts looking. Must
                       # clear hair that reaches the shoulders, or the fit shrinks the body to

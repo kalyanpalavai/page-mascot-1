@@ -9,7 +9,14 @@
     "type": "git",
     "url": "git+https://github.com/nilbuild/page-mascot.git"
   },
-  "keywords": ["mascot", "avatar", "react", "cursor", "sprite", "portfolio"],
+  "keywords": [
+    "mascot",
+    "avatar",
+    "react",
+    "cursor",
+    "sprite",
+    "portfolio"
+  ],
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -19,7 +26,11 @@
     }
   },
   "types": "./dist/index.d.ts",
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "dev": "vite",
     "sync:skill": "cp src/mascot.tsx skills/page-mascot/mascot.tsx",
@@ -30,6 +41,8 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "deploy": "npm run build:site && wrangler deploy",
+    "build:home": "vite build --config vite.home.config.ts",
+    "deploy:home": "npm run build:home && npx wrangler pages deploy site-build-home --project-name kalyan-home",
     "prepack": "npm run build"
   },
   "peerDependencies": {
@@ -53,5 +66,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "page-mascot": "^0.1.0"
   }
 }

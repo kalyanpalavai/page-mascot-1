@@ -61,16 +61,7 @@ export const MASCOTS = [
 
 export type MascotName = (typeof MASCOTS)[number]
 
-export const MASCOT: MascotName = 'fox'
-
-export const STYLES = [
-  { name: 'colour', character: 'fox', note: 'the default' },
-  { name: 'ink', character: 'fox-ink', note: 'black line' },
-  { name: 'sketch', character: 'fox-sketch', note: 'pencil' },
-  { name: 'riso', character: 'fox-riso', note: 'two-tone print' },
-  { name: 'paper', character: 'fox-paper', note: 'cut paper' },
-  { name: 'pixel', character: 'fox-pixel', note: '32 across' },
-]
+export const MASCOT: string = 'designer-ink'
 
 export function sheets(character: string) {
   return {

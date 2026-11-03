@@ -61,6 +61,12 @@ API:
 export OPENAI_API_KEY=sk-...
 ```
 
+If your image tool cannot make transparent backgrounds, the skill asks for a solid chroma-key
+colour instead and removes it with `scripts/key.py`.
+
+Building the sheets needs Python 3 (`pip install -r skills/page-mascot/scripts/requirements.txt`).
+Using the component does not.
+
 Or take the [prompts](skills/page-mascot/reference/prompts.md) and use them in any chat
 UI.
 
@@ -91,6 +97,29 @@ The same character can be drawn in six styles: colour, ink, sketch, riso, paper 
 Only the rendering changes, so the alignment holds.
 
 ![the same fox drawn in six styles](.github/styles.png)
+
+## Repository
+
+| path | what |
+| --- | --- |
+| `src/` | the `Mascot` component, published as `page-mascot` |
+| `skills/page-mascot/` | the agent skill: instructions, prompts, and the Python build scripts |
+| `characters/` | source sheets (PNG) for each character |
+| `public/mascots/` | the same sheets as WebP, served by the demo site |
+| `site/` | the demo page (Vite + Tailwind) |
+
+## Development
+
+```bash
+npm install
+npm run dev         # demo site
+npm run typecheck
+npm run lint
+npm run build       # compile the package and sync the skill's copy of mascot.tsx
+```
+
+`skills/page-mascot/mascot.tsx` is a copy of `src/mascot.tsx`. Edit the source, then run
+`npm run sync:skill`; `npm run check:skill` fails if they drift.
 
 ## License
 
