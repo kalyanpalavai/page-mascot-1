@@ -4,6 +4,6 @@
     "main": "src/index.ts",
     "compatibility_date": "2026-11-04",
     "assets": {
-      "directory": "./site-build-home"
+      "directory": "./dist"
     }
   }
